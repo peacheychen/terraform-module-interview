@@ -8,6 +8,8 @@ terraform {
   }
 }
 
+# https://registry.terraform.io/providers/hashicorp/vault/latest/docs/resources/generic_secret
+
 resource "vault_generic_secret" "secret" {
 #   name = "account-$(var.environment)"
   # provider = vault.vault_prod
@@ -16,6 +18,8 @@ resource "vault_generic_secret" "secret" {
   data_json = var.vault_generic_secret_data_json
 }
 
+# https://registry.terraform.io/providers/hashicorp/vault/latest/docs/resources/policy
+
 resource "vault_policy" "policy" {
 #   provider = vault.vault_prod
   name     = var.vault_policy_name
@@ -23,9 +27,12 @@ resource "vault_policy" "policy" {
   policy = var.vault_policy_policy
 }
 
+# https://registry.terraform.io/providers/hashicorp/vault/latest/docs/data-sources/auth_backend
 data "vault_auth_backend" "userpass" {
   path = "userpass"
 }
+
+# https://registry.terraform.io/providers/hashicorp/vault/latest/docs/resources/generic_endpoint
 
 resource "vault_generic_endpoint" "endpoint" {
 #   provider             = vault.vault_prod
