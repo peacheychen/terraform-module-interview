@@ -6,6 +6,7 @@ variable "docker_container_image" {
 
 variable "docker_container_env" {
   description = "docker container environmental variables"
+  type        = set(string)
 }
 
 variable "docker_container_network" {
