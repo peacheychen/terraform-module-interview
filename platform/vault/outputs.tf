@@ -1,5 +1,5 @@
 output "userpass" {
-    value = data.vault_auth_backend.userpass
+    value = module.vault.data.userpass
     description = "userpass"
 
 }

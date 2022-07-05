@@ -1,12 +1,12 @@
-terraform {
-  required_version = ">= 0.1.0.7"
+# terraform {
+#   required_version = ">= 0.1.0.7"
 
-  required_providers {
-    vault = {
-      version = ">= 3.0.1"
-    }
-  }
-}
+#   required_providers {
+#     vault = {
+#       version = ">= 3.0.1"
+#     }
+#   }
+# }
 
 # https://registry.terraform.io/providers/hashicorp/vault/latest/docs/resources/generic_secret
 
